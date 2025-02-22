@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 2</h1>
+    <p>Створити функцію, яка за номером місяця повертає його назву.</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        function checkMonthName(numb) {
+          let result;
+          switch (numb) {
+            case 1:
+              result = 'Січень';
+              break;
+            case 2:
+              result = 'Лютий';
+              break;
+            case 3:
+              result = 'Березень';
+              break;
+            case 4:
+              result = 'Квітень';
+              break;
+            case 5:
+              result = 'Травень';
+              break;
+            case 6:
+              result = 'Червень';
+              break;
+            case 7:
+              result = 'Липень';
+              break;
+            case 8:
+              result = 'Серпень';
+              break;
+            case 9:
+              result = 'Вересень';
+              break;
+            case 10:
+              result = 'Жовтень';
+              break;
+            case 11:
+              result = 'Листопад';
+              break;
+            case 12:
+              result = 'Грудень';
+              break;
+          }
+          return result;
+        }
+        let yourNumb = parseInt(prompt('Введіть номер місяця, назву якого бажаєте відобразити', ''));
+        let monthName = checkMonthName(yourNumb);
+
+        document.write(`Під номером ${yourNumb} знаходиться місяць ${monthName}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 7</h1>
+    <p>Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим фіксованим повідомленням).</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        function createTable(row, column, word) {
+          document.write('<table border="1" cellpadding="5" cellspacing="2">');
+          for (let i = 0; i < row; i++) {
+            document.write('<tr>');
+            for (let j = 0; j < column; j++) {
+              document.write(`<td>${word}</td>`);
+            }
+            document.write('</tr>');
+          }
+          document.write('</table>');
+        }
+        const row = parseInt(prompt('Введіть кількість необхідних рядків', ''));
+        const column = parseInt(prompt('Введіть кількість необхідних стовбців', ''));
+        const word = prompt('Введіть слово для заповнення стовбця', '');
+        console.log(word);
+        let tableCreate = createTable(row, column, word);
+      }
+    </script>
+  </body>
+</html>

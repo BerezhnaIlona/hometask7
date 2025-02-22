@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 3</h1>
+    <p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        function dayOfWeek(i) {
+          let day;
+          if (1 <= i && i <= 5) day = 'робочий день';
+          else day = 'вихідний день';
+          return day;
+        }
+
+        let yourDayNumb = parseInt(prompt('Введіть номер дня неділі від 1 до 7', '0'));
+        let dayName = dayOfWeek(yourDayNumb);
+        document.write(`Під номером ${yourDayNumb} знаходиться ${dayName}`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+    <p>Створити окремі функції, які для 4 чисел знаходять: суму, добуток, середнє арифметичне, мінімальне значення</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        numb1 = 1 + Math.floor(Math.random() * 10);
+        numb2 = 2 + Math.floor(Math.random() * 10);
+        numb3 = 3 + Math.floor(Math.random() * 10);
+        numb4 = 4 + Math.floor(Math.random() * 10);
+
+        //--------------CУМА
+        function sumNumb(a, b, c, d) {
+          return a + b + c + d;
+        }
+        let sumNumbResult = sumNumb(numb1, numb2, numb3, numb4);
+        document.write(`Сума 4 чисел становить ${sumNumbResult}<br>`);
+        //--------------Добуток
+        function prodNumb(a, b, c, d) {
+          return a * b * c * d;
+        }
+        let prodNumbResult = prodNumb(numb1, numb2, numb3, numb4);
+        document.write(`Добуток 4 чисел становить ${prodNumbResult}<br>`);
+        //--------------СЕРЕДНЄ АРИФМЕТИЧНЕ
+        function avgNumb(a, b, c, d) {
+          return (a + b + c + d) / 4;
+        }
+        let avgNumbResult = avgNumb(numb1, numb2, numb3, numb4);
+        document.write(`Середнє арифметичну із 4 чисел становить ${avgNumbResult}<br>`);
+        //--------------МІНІМАЛЬНЕ ЗНАЧЕННЯ
+        function minNumb(a, b, c, d) {
+          return Math.min(a, b, c, d);
+        }
+        let minNumbResult = minNumb(numb1, numb2, numb3, numb4);
+        document.write(`Найменше арифметичне число із 4 чисел становить ${minNumbResult}<br>`);
+      }
+    </script>
+  </body>
+</html>

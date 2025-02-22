@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 1</h1>
+    <p>Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        function monthNumber(i) {
+          let result;
+          if (i === 12 || i <= 2) result = 'Зима';
+          else if (3 <= i && i <= 5) result = 'Весна';
+          else if (6 <= i && i <= 8) result = 'Літо';
+          else result = 'Осінь';
+          return result;
+        }
+        let yourNumbOfMonth = parseInt(prompt('Введіть номер місяця', '0'));
+        let seasonName = monthNumber(yourNumbOfMonth);
+        document.write(`Під номером ${yourNumbOfMonth} знаходиться пора року ${seasonName}`);
+      }
+    </script>
+  </body>
+</html>

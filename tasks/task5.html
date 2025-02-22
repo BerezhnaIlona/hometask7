@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 5</h1>
+    <p>Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        const numb1 = parseInt(prompt('Введіть перше число', ''));
+        const numb2 = parseInt(prompt('Введіть друге число', ''));
+        const numb3 = parseInt(prompt('Введіть третє число', ''));
+
+        function threeFunctInOne(a, b, c) {
+          let evenNumb = 0;
+          let positiveNumb = 0;
+          let bigNumb = 0;
+
+          if (a % 2 === 0) evenNumb++;
+          if (b % 2 === 0) evenNumb++;
+          if (c % 2 === 0) evenNumb++;
+
+          if (a >= 0) positiveNumb++;
+          if (b >= 0) positiveNumb++;
+          if (c >= 0) positiveNumb++;
+
+          if (a > 100) bigNumb++;
+          if (b > 100) bigNumb++;
+          if (c > 100) bigNumb++;
+          return document.write(`Кількість парних чисел становить ${evenNumb}<br>
+          Kiлькість додатних чисел становить ${positiveNumb}<br>
+          Kiлькість чисел більших за 100 становить ${bigNumb}<br>`);
+        }
+
+        document.write(`Введеними числами є числа ${numb1}, ${numb2}, ${numb3}<br>`);
+        let result = threeFunctInOne(numb1, numb2, numb3);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ukr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>Створити окремі функції, які переводять: сантиметри у дюйми, кілограми у фунти, кілометри у милі.</p>
+    <a href="../index.html" class="back-link">Повернутися на головну сторінку</a>
+    <script>
+      //1. Знаходимо результат
+      if (confirm('Почати тестування?')) {
+        let numb = parseInt(prompt('Введіть число яке треба перевести', '0'));
+        function centimetersIntoInches(data) {
+          return (data * 0.4).toFixed(2);
+        }
+
+        function kgToPound(data) {
+          return (data * 2.2).toFixed(2);
+        }
+
+        function kmToMiles(data) {
+          return (data * 1.61).toFixed(2);
+        }
+
+        let centimNumb = centimetersIntoInches(numb);
+        let poundNumb = kgToPound(numb);
+        let mileNumb = kmToMiles(numb);
+        document.write(`${numb} см це ${centimNumb} дюймів <br>
+      ${numb} кг це ${poundNumb} фунтів<br> 
+      ${numb} км це ${mileNumb} милі`);
+      }
+    </script>
+  </body>
+</html>
